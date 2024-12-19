@@ -1,0 +1,1 @@
+android can send {"date":"2024-12-19 12:43:33","message":"22222","sender":"f523b2a9-bba2-11ef-a5b0-04d4c47abfd9","title":"1111","username":"123"} information correctly but server cant receive, 415 Unsupported Media Type
