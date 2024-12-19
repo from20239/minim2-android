@@ -2,6 +2,7 @@ package com.example.proyectodsa_android;
 
 import com.example.proyectodsa_android.models.InventoryObject;
 import com.example.proyectodsa_android.models.LoginRequest;
+import com.example.proyectodsa_android.models.QuestionPayload;
 import com.example.proyectodsa_android.models.StoreObject;
 import com.example.proyectodsa_android.models.User;
 
@@ -46,5 +47,10 @@ public interface ApiService {
             @Path("userID") String userID,
             @Path("quantity") int quantity,
             @Header("Cookie") String token
+    );
+
+    @POST("question")
+    Call<Void> postQuestion(
+            @Body QuestionPayload payload
     );
 }

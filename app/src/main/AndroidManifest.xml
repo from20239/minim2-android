@@ -35,6 +35,13 @@
         <activity
             android:name=".activity.AuthActivity"
             android:exported="false" />
+        <activity android:name=".activity.SubmitQuestionActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

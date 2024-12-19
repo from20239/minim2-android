@@ -32,6 +32,7 @@ import retrofit2.Response;
 public class HomeActivity extends AppCompatActivity {
     private ImageButton btnUserStuff;
     private ImageButton btnStore;
+    private ImageButton btnSubmitQuestion; // new btn for question
     private Button btnLogout;
     private TextView tvUsername;
     private String userID;
@@ -47,6 +48,7 @@ public class HomeActivity extends AppCompatActivity {
         btnUserStuff = findViewById(R.id.btnUserStuff);
         btnStore = findViewById(R.id.btnstore);
         btnLogout = findViewById(R.id.btnLogout);
+        btnSubmitQuestion = findViewById(R.id.btnSubmitQuestion); // Make sure to assign the correct ID
 
         String username = getIntent().getStringExtra("username");
         userID = getIntent().getStringExtra("userID");
@@ -75,6 +77,14 @@ public class HomeActivity extends AppCompatActivity {
 
         btnUserStuff.setOnClickListener(v -> {
             Intent intent = new Intent(this, UserStuffActivity.class);
+            intent.putExtra("username", username);
+            intent.putExtra("userID", userID);
+            intent.putExtra("token", token);
+            startActivity(intent);
+        });
+
+        btnSubmitQuestion.setOnClickListener(v -> { // new question btn
+            Intent intent = new Intent(this, SubmitQuestionActivity.class);
             intent.putExtra("username", username);
             intent.putExtra("userID", userID);
             intent.putExtra("token", token);

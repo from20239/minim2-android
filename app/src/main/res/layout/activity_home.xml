@@ -82,8 +82,7 @@
         </FrameLayout>
 
         <FrameLayout
-            android:id="@+id/btn3"
-
+            android:id="@+id/btnSubmitQuestionContainer"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_marginStart="60dp"
@@ -93,11 +92,12 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageButton
+                android:id="@+id/btnSubmitQuestion"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="118dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:scaleType="centerCrop"
-                android:src="@drawable/banania_stuff" />
+                android:src="@drawable/question_icon" />
         </FrameLayout>
 
         <FrameLayout
